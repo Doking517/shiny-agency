@@ -7,20 +7,32 @@ const CardLabel = styled.span`
   color: #5843e4;
   font-size: 22px;
   font-weight: bold;
+  font-weight: 400;
+  margin-left: 15px;
+`
+const CardTitle = styled.span`
+  font-size: 25px;
+  font-weight: 400;
+  flex-shrink: 0;
+  width: 210px;
+  height: 29px;
+  text-align: center;
 `
 
 const CardImg = styled.img`
-  height: 80px;
-  width: 80px;
+  height: 148px;
+  width: 148px;
   border-radius: 50%;
 `
 const CardWrapper = styled.div`
+  padding: 32px;
   display: flex;
+  gap: 35px;
   flex-direction: column;
-  padding: 15px;
   background-color: ${colors.backgroundLight};
   border-radius: 30px;
-  width: 350px;
+  width: 339px;
+  height: 334px;
   transition: 200ms;
   &:hover {
     cursor: pointer;
@@ -32,8 +44,18 @@ function Card({ label, title, picture }) {
   return (
     <CardWrapper>
       <CardLabel>{label}</CardLabel>
-      <CardImg src={picture} alt="freelance" />
-      <span>{title}</span>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '34px',
+        }}
+      >
+        <CardImg src={picture} alt="freelance" />
+        <CardTitle>{title}</CardTitle>
+      </div>
     </CardWrapper>
   )
 }

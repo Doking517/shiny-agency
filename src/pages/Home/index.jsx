@@ -5,7 +5,7 @@ import HomeImage from '../../assets/HomeImage.png'
 import { Link } from 'react-router-dom'
 
 const StyledHomeWrapper = styled.div`
-  margin-top: 129px;
+  margin-top: 25px;
   margin-left: 65px;
   margin-right: 62px;
   width: 1313px;
